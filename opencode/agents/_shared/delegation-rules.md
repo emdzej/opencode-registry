@@ -122,6 +122,8 @@ Scan EVERY user request for these keywords. If found, delegate IMMEDIATELY.
 | **SQL** | SQL, PostgreSQL queries, MySQL queries, window functions, CTEs, stored procedures, query optimization | `subagents/02-languages/sql-pro` |
 | **React** | React, hooks, React components, Redux, Zustand, Next.js, RSC, Server Components, React Query | `subagents/02-languages/react-specialist` |
 | **Vue** | Vue, Vue 3, Nuxt, Composition API, Pinia, Vuex, Vue Router | `subagents/02-languages/vue-expert` |
+| **Java** | Java, JVM, Spring, Spring Boot, Maven, Gradle, JPA, Hibernate, Jakarta EE, JUnit, Tomcat, Quarkus, Micronaut, GraalVM, virtual threads, Project Loom, records, sealed classes | `subagents/02-languages/java-pro` |
+
 
 ## Specialized Domains (Priority: HIGH)
 

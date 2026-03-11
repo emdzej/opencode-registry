@@ -24,6 +24,10 @@ permission:
     "git diff*": "allow"
     # Development tools
     "npm*": "allow"
+    "pnpm*": "allow"
+    "yarn*": "allow"
+    "gradle*": "allow"
+    "mvn*": "allow"
     "pip*": "allow"
   edit:
     "*": "ask"

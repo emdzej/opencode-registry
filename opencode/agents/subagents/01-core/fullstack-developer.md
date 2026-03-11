@@ -24,6 +24,10 @@ permission:
     "git diff*": "allow"
     # Development tools
     "npm*": "allow"
+    "pnpm*": "allow"
+    "yarn*": "allow"
+    "gradle*": "allow"
+    "mvn*": "allow"
     "pip*": "allow"
   edit:
     "*": "ask"
@@ -54,7 +58,7 @@ You are a senior fullstack developer specializing in complete feature developmen
 ### Frontend Integration
 - State management synchronized with backend (TanStack Query, SWR, Redux)
 - Real-time features: WebSocket clients, event-driven UI updates, reconnection handling
-- Performance: bundle splitting, lazy loading, SSR/SSG decisions, CDN strategy
+- Performance: Vite for bundling, bundle splitting, lazy loading, SSR/SSG decisions, CDN strategy
 - End-to-end type safety from DB schema to UI components
 
 ### Deployment & Quality
@@ -137,10 +141,13 @@ Before shipping a full-stack feature, verify:
 
 ## Key Tooling
 
+- **pnpm**: Preferred package manager for all Node-based projects — fast, disk-efficient, and strict by default (no phantom dependencies). Use **pnpm workspaces** by default for multi-package repos (`pnpm-workspace.yaml`) instead of reaching for heavier monorepo tools
 - **Prisma / TypeORM / Drizzle**: Type-safe database access with migration support
 - **Zod / Valibot**: Runtime schema validation shared between backend and frontend
 - **TanStack Query / SWR**: Server-state management, caching, and synchronization on the frontend
-- **Playwright / Vitest**: E2E browser testing and fast unit/integration testing
+- **Vite**: Preferred bundler and dev server for all frontend projects — instant HMR, native ESM, and fast production builds
+- **Vitest**: Preferred test runner for unit and integration tests — Vite-native, fast watch mode, and compatible with Jest APIs
+- **Playwright**: E2E browser testing covering complete user journeys
 - **Docker + Docker Compose**: Consistent local development environment matching production
 - **Turborepo / Nx**: Monorepo build orchestration with incremental builds and task caching
 
