@@ -20,12 +20,9 @@ jobs:
         with:
           fetch-depth: 1
           persist-credentials: false
-
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           model: openai/gpt-5.4
-          # share: true
-          # github_token: xxxx
