@@ -123,6 +123,7 @@ Scan EVERY user request for these keywords. If found, delegate IMMEDIATELY.
 | **React** | React, hooks, React components, Redux, Zustand, Next.js, RSC, Server Components, React Query | `subagents/02-languages/react-specialist` |
 | **Vue** | Vue, Vue 3, Nuxt, Composition API, Pinia, Vuex, Vue Router | `subagents/02-languages/vue-expert` |
 | **Java** | Java, JVM, Spring, Spring Boot, Maven, Gradle, JPA, Hibernate, Jakarta EE, JUnit, Tomcat, Quarkus, Micronaut, GraalVM, virtual threads, Project Loom, records, sealed classes | `subagents/02-languages/java-pro` |
+| **.NET** | .NET, dotnet, C#, ASP.NET, ASP.NET Core, Entity Framework, EF Core, NuGet, Blazor, MAUI, minimal API, xUnit, SignalR, Dapper, .NET Aspire, Native AOT, gRPC .NET | `subagents/02-languages/dotnet-pro` |
 
 
 ## Specialized Domains (Priority: HIGH)
