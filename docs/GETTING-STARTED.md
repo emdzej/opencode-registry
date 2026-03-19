@@ -112,9 +112,9 @@ opencode-config info mcp-builder
 **What you'll see:**
 - 7 primary agents for different development roles
 - 43 specialized subagents organized by domain
-- 3 skills for complex workflows
+- 4 skills for complex workflows
 - 3 commands for common operations
-- **Total: 56 components**
+- **Total: 57 components**
 
 ---
 
@@ -126,7 +126,7 @@ OpenCode Registry offers three installation bundles:
 |--------|-----------|----------|
 | **basic** | 4 essential | First-time users, minimal setup |
 | **intermediate** | 10+ components | Regular users, common workflows |
-| **advanced** | All 56 components | Power users, complete ecosystem |
+| **advanced** | All 57 components | Power users, complete ecosystem |
 
 **Preview a bundle before installing:**
 
@@ -257,7 +257,7 @@ Your System
 |----------------|-------|----------------|--------------|---------|
 | **Primary Agent** | 7 | Press **Tab** to switch | You (in OpenCode) | Switch to `build-code` agent |
 | **Subagent** | 43 | Use **@mention** or invoked automatically | Primary agents or you | `@python-pro optimize this code` |
-| **Skill** | 3 | Loaded by agents automatically | Agents/subagents | Agent loads `mcp-builder` skill when needed |
+| **Skill** | 4 | Loaded by agents automatically | Agents/subagents | Agent loads `mcp-builder` skill when needed |
 | **Command** | 2 | Type **/** in OpenCode | You (in OpenCode) | `/commit` to create git commit |
 
 **In short:**

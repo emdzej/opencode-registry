@@ -44,7 +44,7 @@ opencode-config sync
 
 ### What is OpenCode Registry?
 
-A curated collection of 56 AI agents, subagents, skills, and commands with a CLI tool to install and manage them.
+A curated collection of 57 AI agents, subagents, skills, and commands with a CLI tool to install and manage them.
 
 ### What's the difference between agents, subagents, skills, and commands?
 

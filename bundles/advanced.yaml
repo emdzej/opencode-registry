@@ -18,6 +18,7 @@ components:
   - content-research-writer
   - file-organizer
   - work-on-ticket
+  - grill-me
   
   # All commands
   - commit

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-> Centralized library of 56 OpenCode components: agents, subagents, skills, and commands with intelligent installation management.
+> Centralized library of 57 OpenCode components: agents, subagents, skills, and commands with intelligent installation management.
 
 [Quick Start](#quick-start) • [Documentation](#documentation) • [Contributing](CONTRIBUTING.md)
 
@@ -13,7 +13,7 @@
 
 A curated collection of OpenCode components with a smart CLI installer:
 
-- **56 ready-to-use components** - Agents, subagents, skills, and commands
+- **57 ready-to-use components** - Agents, subagents, skills, and commands
 - **Smart CLI** - Installation, updates, and tracking
 - **Model tier system** - Configure models per complexity (high/medium/low/free)
 - **Bundle support** - Install groups (basic/intermediate/advanced)
@@ -71,7 +71,7 @@ cd .. && opencode-config install --group basic
 |------|-------|----------|
 | **Primary Agents** | 7 | build-code, plan-design, debug, review |
 | **Subagents** | 43 | python-pro, kubernetes-expert, security-auditor |
-| **Skills** | 3 | mcp-builder, project-docs, content-research-writer |
+| **Skills** | 4 | mcp-builder, project-docs, content-research-writer, grill-me |
 | **Commands** | 3 | /commit, /documentation, /kb |
 
 ---
@@ -82,7 +82,7 @@ cd .. && opencode-config install --group basic
 |--------|-----------|----------|
 | `basic` | 4 | Getting started |
 | `intermediate` | 10+ | Common workflows |
-| `advanced` | 56 | Complete ecosystem |
+| `advanced` | 57 | Complete ecosystem |
 
 ---
 
