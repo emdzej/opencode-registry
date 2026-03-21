@@ -1,4 +1,3 @@
-
 ---
 model_tier: "free"
 name: grill-me
