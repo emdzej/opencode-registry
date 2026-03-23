@@ -117,13 +117,13 @@ Scan EVERY user request for these keywords. If found, delegate IMMEDIATELY.
 |--------|------------------|----------|
 | **Python** | Python, pip, poetry, uv, FastAPI, Django, Flask, async Python, pytest, pydantic, ruff, mypy | `subagents/02-languages/python-pro` |
 | **TypeScript** | TypeScript, Node.js, npm, yarn, pnpm, Express, NestJS, type system, generics, Deno, Bun | `subagents/02-languages/typescript-pro` |
-| **Go** | Golang, Go, goroutines, channels, go mod, Go modules, Go interfaces, Go concurrency | `subagents/02-languages/golang-pro` |
+| **Go** | Golang, goroutines, channels, go mod, Go modules, Go interfaces, Go concurrency | `subagents/02-languages/golang-pro` |
 | **Bash** | Bash, shell script, zsh, awk, sed, cron, shell automation, CLI scripting | `subagents/02-languages/bash-expert` |
 | **SQL** | SQL, PostgreSQL queries, MySQL queries, window functions, CTEs, stored procedures, query optimization | `subagents/02-languages/sql-pro` |
 | **React** | React, hooks, React components, Redux, Zustand, Next.js, RSC, Server Components, React Query | `subagents/02-languages/react-specialist` |
 | **Vue** | Vue, Vue 3, Nuxt, Composition API, Pinia, Vuex, Vue Router | `subagents/02-languages/vue-expert` |
-| **Java** | Java, JVM, Spring, Spring Boot, Maven, Gradle, JPA, Hibernate, Jakarta EE, JUnit, Tomcat, Quarkus, Micronaut, GraalVM, virtual threads, Project Loom, records, sealed classes | `subagents/02-languages/java-pro` |
-| **.NET** | .NET, dotnet, C#, ASP.NET, ASP.NET Core, Entity Framework, EF Core, NuGet, Blazor, MAUI, minimal API, xUnit, SignalR, Dapper, .NET Aspire, Native AOT, gRPC .NET | `subagents/02-languages/dotnet-pro` |
+| **Java** | JVM, Spring, Spring Boot, Maven, Gradle, JPA, Hibernate, Jakarta EE, JUnit, Tomcat, Quarkus, Micronaut, GraalVM, virtual threads, Project Loom, records, sealed classes | `subagents/02-languages/java-pro` |
+| **.NET** | dotnet, C#, ASP.NET, ASP.NET Core, Entity Framework, EF Core, NuGet, Blazor, MAUI, minimal API, xUnit, SignalR, Dapper, .NET Aspire, Native AOT, gRPC .NET | `subagents/02-languages/dotnet-pro` |
 
 
 ## Specialized Domains (Priority: HIGH)
@@ -133,6 +133,7 @@ Scan EVERY user request for these keywords. If found, delegate IMMEDIATELY.
 | **Mobile** | mobile app, React Native, Flutter, iOS, Android, cross-platform, native app, mobile development | `subagents/07-specialized-domains/mobile-developer` |
 | **Payments** | payment integration, Stripe, PayPal, checkout, subscription billing, PCI compliance, payment gateway, webhooks payments | `subagents/07-specialized-domains/payment-integration` |
 | **Documentation** | technical writing, documentation, API docs, user guide, README, changelog, documentation strategy | `subagents/07-specialized-domains/technical-writer` |
+| **Reverse Engineering** | reverse engineering, reverse engineer, decompile, decompilation, disassemble, disassembly, ghidra, binary ninja, ida pro, radare2, frida, apktool, jadx, smali, binary analysis, malware analysis, firmware analysis, dex analysis | `subagents/07-specialized-domains/reverse-engineer` |
 | **MCP Development** | MCP, Model Context Protocol, MCP server, MCP client, tool development | `subagents/06-developer-experience/mcp-developer` |
 | **CLI Development** | CLI, command-line interface, terminal app, CLI tool, argument parsing, interactive CLI | `subagents/06-developer-experience/cli-developer` |
 | **Developer Experience** | developer experience, DX, build performance, tooling, workflow automation, dev environment | `subagents/06-developer-experience/dx-optimizer` |
@@ -308,7 +309,7 @@ This file provides:
 2. Match against primary keywords first
 3. Match against fallback keywords if no primary match
 4. Check anti-keywords to exclude false positives
-5. If multiple domains match, use the priority order: Security > Language > Infrastructure > Architecture > Testing > Database
+5. If multiple domains match, use the priority order: Security > Language > Infrastructure > Architecture > Testing > Database > ReverseEngineering
 
 **Example agent logic:**
 ```
@@ -333,4 +334,3 @@ matched_domains.sort(key=lambda x: (0 if x[1]=='primary' else 1,
 for domain, _ in matched_domains:
     invoke_subagent(config['subagent'], ...)
 ```
-
