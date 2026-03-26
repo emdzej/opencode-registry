@@ -85,7 +85,7 @@ For each resolved library ID, use `context7_query-docs`:
 
 Combine all retrieved knowledge into a structured research brief. Use the following format:
 
-```
+```python
 ## Internal Knowledge Base
 
 [Findings from Ragclaw searches. Include the database name for each result.]

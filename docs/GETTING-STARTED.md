@@ -13,11 +13,13 @@ Before you begin, ensure you have:
   - Check your version: `opencode --version`
 
 - **Python 3.8 or higher** installed
+
   ```bash
   python --version  # Should show 3.8+
   ```
   
 - **Git** installed
+
   ```bash
   git --version
   ```
@@ -78,11 +80,13 @@ cd ..
 ```
 
 **Expected output:**
-```
+
+```bash
 opencode-config, version 0.2.0
 ```
 
 **Troubleshooting:**
+
 - If `command not found`: Ensure pip's bin directory is in your PATH
 - If pip fails: Try `python -m pip install -e .` (or `python -m pip install -e ".[dev]"` for developers)
 - If permission errors: Don't use `sudo`, use a virtual environment instead
@@ -110,6 +114,7 @@ opencode-config info mcp-builder
 **Note:** The CLI automatically detects the registry location when run from the repository directory (including git worktrees).
 
 **What you'll see:**
+
 - 7 primary agents for different development roles
 - 43 specialized subagents organized by domain
 - 4 skills for complex workflows
@@ -156,11 +161,13 @@ opencode-config install --group basic
 ```
 
 The wizard helps you configure which model to use for each complexity tier:
+
 - **High tier** - Complex reasoning (architecture, design planning)
 - **Medium tier** - General coding (implementation, code review)
 - **Low tier** - Simple tasks (documentation, commit messages)
 
 **What just happened?**
+
 - Model tiers were configured in `~/.config/opencode/opencode-registry-config.json`
 - Component files were **copied** to `~/.config/opencode/` with your model tier configuration applied
 - Each component's `model_tier:` frontmatter was resolved to the correct `model:` for your setup
@@ -187,6 +194,7 @@ ls ~/.config/opencode/skills/
 ```
 
 **You should see:**
+
 - Copied `.md` files with correct `model:` values written in
 - Components marked as installed with timestamps
 
@@ -232,7 +240,7 @@ opencode-config update build-code
 
 ### Directory Structure
 
-```
+```python
 Your System
 ├── ~/opencode-registry/              # The registry (source)
 │   ├── opencode/                     # All components live here
@@ -261,6 +269,7 @@ Your System
 | **Command** | 2 | Type **/** in OpenCode | You (in OpenCode) | `/commit` to create git commit |
 
 **In short:**
+
 - **Agents & Subagents** = AI assistants (Tab for primary, @ for specialized)
 - **Skills** = Reusable workflows (AI-driven, loaded automatically)
 - **Commands** = User shortcuts (you type /, instant execution)

@@ -35,7 +35,8 @@ cd .. && opencode-config install --group basic
 ```
 
 **Expected output after install:**
-```
+
+```text
 ✓ Bundle installed: basic (4 components)
 ```
 
@@ -142,6 +143,7 @@ opencode-config config --registry auto
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Add components to:
+
 - Agents: `opencode/agents/`
 - Subagents: `opencode/agents/subagents/<category>/`
 - Skills: `opencode/skills/<name>/`
@@ -156,12 +158,14 @@ Include YAML frontmatter with metadata.
 MIT License. See [LICENSE](LICENSE).
 
 Third-party components:
+
 - MCP Builder Skill - [Apache 2.0](opencode/skills/mcp-builder/LICENSE.txt)
 - Content Research Writer - [Apache 2.0](opencode/skills/content-research-writer/LICENSE.txt)
 
 ---
 
 Special thanks to:
+
 - **Anthropic** for the MCP Builder skill foundation
 - **ComposioHQ** for the Content Research Writer skill
 - All [contributors](https://github.com/juliendf/opencode-registry/graphs/contributors)

@@ -18,7 +18,8 @@ Quick reference for choosing the right agent for your task. Start simple and esc
 Follow this progression for complex projects:
 
 ### 1. **Planning Phase**
-```
+
+```text
 Vague idea → plan-design → plan-architecture → build-code
 ```
 
@@ -27,7 +28,8 @@ Vague idea → plan-design → plan-architecture → build-code
 - **`build-code`** — Implement the actual solution
 
 ### 2. **Development Phase**
-```
+
+```text
 Implementation → review → debug (if issues)
 ```
 
@@ -36,7 +38,8 @@ Implementation → review → debug (if issues)
 - **`debug`** — Investigate and fix issues end-to-end
 
 ### 3. **Infrastructure Phase**
-```
+
+```text
 Code ready → build-infrastructure → deployment
 ```
 
@@ -74,7 +77,8 @@ Primary agents automatically invoke these when domain keywords are detected:
 ## 🛤️ Common Usage Patterns
 
 ### New Feature Development
-```
+
+```text
 1. plan-design: "I want users to track their orders"
 2. plan-architecture: [receives functional spec] → technical design
 3. build-code: [receives architecture] → implementation
@@ -82,19 +86,22 @@ Primary agents automatically invoke these when domain keywords are detected:
 ```
 
 ### Bug Investigation
-```
+
+```text
 1. debug: "API returns 500 when creating users"
    → Investigates, finds root cause, implements fix
 ```
 
 ### Infrastructure Setup
-```
+
+```text
 1. build-infrastructure: "Deploy Node.js app to GKE with monitoring"
    → Creates Kubernetes manifests, Terraform, CI/CD
 ```
 
 ### Quick Questions
-```
+
+```text
 1. ask-me-anything: "How does JWT work in our codebase?"
    → Searches code, explains implementation
 ```
@@ -103,7 +110,7 @@ Primary agents automatically invoke these when domain keywords are detected:
 
 Agents naturally hand off to each other:
 
-```
+```text
 plan-design → plan-architecture
 "Next step: Switch to plan-architecture for technical design"
 
@@ -120,11 +127,13 @@ Any agent → ask-me-anything
 ## 🚨 When NOT to Use Agents
 
 **Don't use agents for:**
+
 - Simple file edits you can do faster manually
 - Reading a single file (use your editor)
 - Trivial questions easily googled
 
 **Do use agents for:**
+
 - Multi-file changes
 - Complex debugging across components  
 - Architecture decisions
@@ -134,20 +143,24 @@ Any agent → ask-me-anything
 ## 💡 Tips for Better Results
 
 ### 1. **Start Broad, Get Specific**
+
 - ❌ "Fix line 42 in auth.js"
 - ✅ "Users can't log in, getting 401 errors"
 
 ### 2. **Provide Context**
+
 - Include error messages, stack traces, recent changes
 - Mention constraints (timeline, technology requirements)
 - Share what you've already tried
 
 ### 3. **Use Progressive Refinement**
+
 - Start with plan-design for unclear requirements
 - Let agents hand off naturally through the workflow
 - Don't skip planning phases for complex features
 
 ### 4. **Trust the Delegation**
+
 - Primary agents know when to call specialists
 - Include relevant keywords in your requests
 - Don't manually specify subagents (they auto-route)
@@ -155,8 +168,10 @@ Any agent → ask-me-anything
 ## 🔧 Advanced Patterns
 
 ### Multi-Domain Projects
+
 For projects touching multiple areas:
-```
+
+```text
 User: "Build a React app with Node.js API and PostgreSQL, deployed to AWS"
 
 build-code will auto-delegate to:
@@ -167,7 +182,8 @@ build-code will auto-delegate to:
 ```
 
 ### Iterative Development
-```
+
+```text
 1. plan-design: MVP feature spec
 2. build-code: Basic implementation  
 3. review: Security check
@@ -176,7 +192,8 @@ build-code will auto-delegate to:
 ```
 
 ### Debugging Complex Issues
-```
+
+```text
 1. debug: Initial investigation
    → May delegate to performance-engineer, database-optimizer, etc.
    → Returns with root cause + fix
