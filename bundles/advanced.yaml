@@ -19,6 +19,7 @@ components:
   - file-organizer
   - work-on-ticket
   - grill-me
+  - kb-search
   
   # All commands
   - commit
