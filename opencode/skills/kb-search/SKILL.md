@@ -140,6 +140,12 @@ If Context7 returned no useful results:
 - If a recommendation is your own synthesis (not directly from a source), say so.
 - Never present retrieved information as your own reasoning or vice versa.
 
+### Do Not Chase Source Files
+
+- Ragclaw search results include source paths as metadata. **Never** use these paths to read, glob, or open the original files.
+- Knowledge bases are portable — they may have been indexed on a different machine, in a different directory, or from URLs that are no longer accessible.
+- The chunk text returned by `kb_search` is the complete, authoritative content. If the chunk doesn't contain enough detail, search with a different query instead of trying to read the source file.
+
 ### Handling Uncertainty
 
 - If both sources return nothing useful, say so clearly and provide the best answer you can from general knowledge, clearly labeled as such.
