@@ -20,6 +20,7 @@ components:
   - work-on-ticket
   - grill-me
   - kb-search
+  - web-search
   
   # All commands
   - commit

@@ -15,6 +15,7 @@ components:
   - mcp-builder
   - grill-me
   - kb-search
+  - web-search
   
   # Commands
   - commit
