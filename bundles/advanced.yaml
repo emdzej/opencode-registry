@@ -25,4 +25,7 @@ components:
   - documentation
   - kb
   
+  # All tools
+  - github
+  
   # Note: Subagents are included automatically as they're in the agent/subagents directory

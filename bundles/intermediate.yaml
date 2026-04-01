@@ -19,3 +19,6 @@ components:
   # Commands
   - commit
   - kb
+  
+  # Tools
+  - github
