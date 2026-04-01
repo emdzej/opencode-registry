@@ -21,6 +21,8 @@ components:
   - grill-me
   - kb-search
   - web-search
+  - kubernetes-ops
+  - argocd-ops
   
   # All commands
   - commit
