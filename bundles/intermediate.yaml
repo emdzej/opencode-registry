@@ -11,7 +11,6 @@ components:
   
   # Skills
   - project-docs
-  - code-docs
   - mcp-builder
   - grill-me
   - kb-search
@@ -19,8 +18,4 @@ components:
   
   # Commands
   - commit
-  - review
   - kb
-  
-  # Tools
-  - github

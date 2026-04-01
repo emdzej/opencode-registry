@@ -44,7 +44,7 @@ opencode-config sync
 
 ### What is OpenCode Registry?
 
-A curated collection of 57 AI agents, subagents, skills, and commands with a CLI tool to install and manage them.
+A curated collection of 64 AI agents, subagents, skills, and commands with a CLI tool to install and manage them.
 
 ### What's the difference between agents, subagents, skills, and commands?
 
@@ -110,9 +110,9 @@ opencode-config config --target /path/to/directory
 
 ### Which bundle should I start with?
 
-- **basic** (4 components) - Essential agents
-- **intermediate** (10+) - Common workflows
-- **advanced** (56) - Everything
+- **basic** (5 components) - Essential agents
+- **intermediate** (16+) - Common workflows
+- **advanced** (64) - Everything
 
 Start with `basic`, add more as needed.
 

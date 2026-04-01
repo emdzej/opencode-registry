@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-> Centralized library of 57 OpenCode components: agents, subagents, skills, and commands with intelligent installation management.
+> Centralized library of 64 OpenCode components: agents, subagents, skills, and commands with intelligent installation management.
 
 [Quick Start](#quick-start) • [Documentation](#documentation) • [Contributing](CONTRIBUTING.md)
 
@@ -13,7 +13,7 @@
 
 A curated collection of OpenCode components with a smart CLI installer:
 
-- **57 ready-to-use components** - Agents, subagents, skills, and commands
+- **64 ready-to-use components** - Agents, subagents, skills, and commands
 - **Smart CLI** - Installation, updates, and tracking
 - **Model tier system** - Configure models per complexity (high/medium/low/free)
 - **Bundle support** - Install groups (basic/intermediate/advanced)
@@ -37,7 +37,7 @@ cd .. && opencode-config install --group basic
 **Expected output after install:**
 
 ```text
-✓ Bundle installed: basic (4 components)
+✓ Bundle installed: basic (5 components)
 ```
 
 ---
@@ -66,13 +66,13 @@ cd .. && opencode-config install --group basic
 
 ---
 
-## Components (56 Total)
+## Components (64 Total)
 
 | Type | Count | Examples |
 |------|-------|----------|
 | **Primary Agents** | 7 | build-code, plan-design, debug, review |
-| **Subagents** | 43 | python-pro, kubernetes-expert, security-auditor |
-| **Skills** | 4 | mcp-builder, project-docs, content-research-writer, grill-me |
+| **Subagents** | 46 | python-pro, kubernetes-expert, security-auditor |
+| **Skills** | 8 | mcp-builder, project-docs, kubernetes-ops, argocd-ops, kb-search, web-search |
 | **Commands** | 3 | /commit, /documentation, /kb |
 
 ---
@@ -81,9 +81,9 @@ cd .. && opencode-config install --group basic
 
 | Bundle | Components | Best For |
 |--------|-----------|----------|
-| `basic` | 4 | Getting started |
-| `intermediate` | 10+ | Common workflows |
-| `advanced` | 57 | Complete ecosystem |
+| `basic` | 5 | Getting started |
+| `intermediate` | 16+ | Common workflows |
+| `advanced` | 64 | Complete ecosystem |
 
 ---
 

@@ -68,12 +68,12 @@ Component content here...
 When adding subagents, use these categories:
 
 - `01-core` - Backend, API, microservices, GraphQL, fullstack
-- `02-languages` - Python, TypeScript, Go, React, Bash, SQL, Vue
-- `03-infrastructure` - Kubernetes, Terraform, AWS, GCP, Azure, GitOps
-- `04-quality-and-security` - Testing, security, performance, debugging
-- `05-data-ai` - ML, data engineering, AI, database optimization
+- `02-languages` - Python, TypeScript, Go, Java, .NET, React, Bash, SQL, Vue
+- `03-infrastructure` - Kubernetes, Terraform, Crossplane, AWS, GCP, Azure, GitOps, networking, observability, SRE
+- `04-quality-and-security` - Testing, security, penetration testing, performance, debugging
+- `05-data-ai` - ML, MLOps, data engineering, AI, database optimization
 - `06-developer-experience` - CLI development, MCP, DX optimization
-- `07-specialized-domains` - Mobile, payments, technical writing
+- `07-specialized-domains` - Mobile, payments, reverse engineering, technical writing
 - `09-meta-orchestration` - Workflow orchestration, context management
 
 ## 🧪 Testing Your Changes

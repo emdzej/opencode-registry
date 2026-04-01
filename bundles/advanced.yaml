@@ -12,12 +12,8 @@ components:
   
   # All skills
   - project-docs
-  - code-docs
   - mcp-builder
-  - meeting-insights-analyzer
   - content-research-writer
-  - file-organizer
-  - work-on-ticket
   - grill-me
   - kb-search
   - web-search
@@ -26,12 +22,7 @@ components:
   
   # All commands
   - commit
-  - review
   - documentation
-  - test
   - kb
-  
-  # All tools
-  - github
   
   # Note: Subagents are included automatically as they're in the agent/subagents directory

@@ -66,11 +66,14 @@ Primary agents automatically invoke these when domain keywords are detected:
 
 | Category | Specialists | Auto-triggered by keywords |
 |----------|-------------|---------------------------|
-| **Languages** | python-pro, typescript-pro, golang-pro, bash-expert, sql-pro | Language names, frameworks |
-| **Architecture** | backend-architect, microservices-architect, api-designer | API, microservices, architecture |
-| **Infrastructure** | aws-specialist, kubernetes-expert, terraform-expert | Cloud platforms, K8s, IaC |
-| **Quality** | security-auditor, performance-engineer, test-automator | Security, performance, testing |
-| **Data/AI** | database-optimizer, data-engineer, ai-engineer | Database, ML, data pipelines |
+| **Core Architecture** | backend-architect, microservices-architect, api-designer, graphql-architect, fullstack-developer | API, microservices, architecture, GraphQL |
+| **Languages** | python-pro, typescript-pro, golang-pro, java-pro, dotnet-pro, bash-expert, sql-pro, react-specialist, vue-expert | Language names, frameworks |
+| **Infrastructure** | aws-specialist, azure-specialist, gcp-specialist, cloud-architect, kubernetes-expert, terraform-expert, upbound-crossplane-expert, deployment-engineer, gitops-specialist, network-engineer, observability-engineer, platform-engineer, sre-engineer | Cloud platforms, K8s, IaC, CI/CD, networking |
+| **Quality & Security** | security-auditor, penetration-tester, performance-engineer, test-automator, debugger | Security, performance, testing, debugging |
+| **Data & AI** | database-optimizer, data-engineer, ai-engineer, ml-engineer, mlops-engineer | Database, ML, data pipelines, AI |
+| **Developer Experience** | cli-developer, dx-optimizer, mcp-developer | CLI tools, DX, MCP servers |
+| **Specialized Domains** | mobile-developer, payment-integration, reverse-engineer, technical-writer | Mobile, payments, reverse engineering, docs |
+| **Meta-Orchestration** | context-manager, workflow-orchestrator | Workflow automation, context management |
 
 > **Note:** You rarely invoke subagents directly. Primary agents handle delegation automatically based on your request's keywords.
 
