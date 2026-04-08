@@ -117,10 +117,11 @@ opencode-config info mcp-builder
 
 - 7 primary agents for different development roles
 - 46 specialized subagents organized by domain
-- 8 skills for complex workflows
+- 9 skills for complex workflows
 - 3 commands for common operations
+- 3 MCP server definitions (RagClaw, Context7, Brave Search)
 - 1 tool plugin (GitHub)
-- **Total: 65 components**
+- **Total: 69 components**
 
 ---
 
@@ -132,7 +133,7 @@ OpenCode Registry offers three installation bundles:
 |--------|-----------|----------|
 | **basic** | 5 essential | First-time users, minimal setup |
 | **intermediate** | 16+ components | Regular users, common workflows |
-| **advanced** | All 65 components | Power users, complete ecosystem |
+| **advanced** | All 69 components | Power users, complete ecosystem |
 
 **Preview a bundle before installing:**
 
@@ -266,8 +267,9 @@ Your System
 |----------------|-------|----------------|--------------|---------|
 | **Primary Agent** | 7 | Press **Tab** to switch | You (in OpenCode) | Switch to `build-code` agent |
 | **Subagent** | 46 | Use **@mention** or invoked automatically | Primary agents or you | `@python-pro optimize this code` |
-| **Skill** | 8 | Loaded by agents automatically | Agents/subagents | Agent loads `mcp-builder` skill when needed |
+| **Skill** | 9 | Loaded by agents automatically | Agents/subagents | Agent loads `mcp-builder` skill when needed |
 | **Command** | 3 | Type **/** in OpenCode | You (in OpenCode) | `/commit` to create git commit |
+| **MCP Server** | 3 | Registered as MCP server | Agents or you | Context7 for live library docs |
 | **Tool** | 1 | Registered as OpenCode tool plugin | Agents or you | `github_pr` to manage pull requests |
 
 **In short:**

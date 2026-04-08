@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-> Centralized library of 65 OpenCode components: agents, subagents, skills, commands, and tools with intelligent installation management.
+> Centralized library of 69 OpenCode components: agents, subagents, skills, commands, MCP servers, and tools with intelligent installation management.
 
 [Quick Start](#quick-start) • [Documentation](#documentation) • [Contributing](CONTRIBUTING.md)
 
@@ -13,7 +13,7 @@
 
 A curated collection of OpenCode components with a smart CLI installer:
 
-- **65 ready-to-use components** - Agents, subagents, skills, commands, and tools
+- **69 ready-to-use components** - Agents, subagents, skills, commands, MCP servers, and tools
 - **Smart CLI** - Installation, updates, and tracking
 - **Model tier system** - Configure models per complexity (high/medium/low/free)
 - **Bundle support** - Install groups (basic/intermediate/advanced)
@@ -66,14 +66,15 @@ cd .. && opencode-config install --group basic
 
 ---
 
-## Components (65 Total)
+## Components (69 Total)
 
 | Type | Count | Examples |
 |------|-------|----------|
 | **Primary Agents** | 7 | build-code, plan-design, debug, review |
 | **Subagents** | 46 | python-pro, kubernetes-expert, security-auditor |
-| **Skills** | 8 | mcp-builder, project-docs, kubernetes-ops, argocd-ops, kb-search, web-search |
+| **Skills** | 9 | mcp-builder, project-docs, kubernetes-ops, argocd-ops, kb-search, registry-sync |
 | **Commands** | 3 | /commit, /documentation, /kb |
+| **MCP Servers** | 3 | ragclaw, context7, brave-search |
 | **Tools** | 1 | github |
 
 ---
@@ -84,7 +85,7 @@ cd .. && opencode-config install --group basic
 |--------|-----------|----------|
 | `basic` | 5 | Getting started |
 | `intermediate` | 16+ | Common workflows |
-| `advanced` | 65 | Complete ecosystem |
+| `advanced` | 69 | Complete ecosystem |
 
 ---
 
@@ -94,6 +95,47 @@ cd .. && opencode-config install --group basic
 2. **Installation** copies files to `~/.config/opencode/` and resolves model tiers
 3. **Tracking** stores state in `~/.config/opencode/opencode-registry-installed.json`
 4. **Updates** re-apply your model tier config to new versions
+
+---
+
+## MCP Server
+
+The registry includes a built-in [MCP](https://modelcontextprotocol.io/) server that exposes all components via the Model Context Protocol. AI agents and editors can discover, read, create, and delete components programmatically.
+
+**Features:**
+
+- **20 tools** — per-type CRUD (`list_agents`, `get_agent`, `create_agent`, `delete_agent`, etc.) across all 5 component types
+- **5 resource templates** — `opencode://agents/{slug}`, `opencode://subagents/{slug}`, etc.
+- **Stdio + HTTP transports** — works locally or as a network service
+- **File watcher** — detects changes to `opencode/` and logs updates in real time
+- **Scaffold generation** — `create_*` tools generate valid frontmatter + content when body is omitted
+
+**Quick start:**
+
+```bash
+cd mcp-server && bun install
+
+# stdio transport (for editor integration)
+bun run src/cli.ts serve stdio
+
+# HTTP transport (for network/multi-session use)
+bun run src/cli.ts serve http --port 3000
+```
+
+**Editor configuration (OpenCode):**
+
+```json
+{
+  "mcp": {
+    "opencode-registry": {
+      "command": "bun",
+      "args": ["run", "/path/to/opencode-registry/mcp-server/src/cli.ts", "serve", "stdio"]
+    }
+  }
+}
+```
+
+Built with Bun, TypeScript, and [`@modelcontextprotocol/sdk`](https://github.com/modelcontextprotocol/typescript-sdk). See [`mcp-server/`](mcp-server/) for full source.
 
 ---
 
@@ -149,6 +191,7 @@ Add components to:
 - Subagents: `opencode/agents/subagents/<category>/`
 - Skills: `opencode/skills/<name>/`
 - Commands: `opencode/commands/`
+- MCP Servers: `opencode/mcp-servers/`
 
 Include YAML frontmatter with metadata.
 

@@ -19,6 +19,7 @@ components:
   - web-search
   - kubernetes-ops
   - argocd-ops
+  - registry-sync
   
   # All commands
   - commit
