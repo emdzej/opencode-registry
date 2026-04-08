@@ -4,13 +4,15 @@ A step-by-step guide to installing and using OpenCode Registry for the first tim
 
 ## Prerequisites
 
-Before you begin, ensure you have:
+`opencode-registry` requires a working OpenCode setup:
 
 - **OpenCode 1.2.5 or later** - The AI assistant platform
   - [Download from opencode.ai](https://opencode.ai)
   - Or use [OpenCode Zen (cloud version)](https://zen.opencode.ai)
   - See [installation guide](https://opencode.ai/docs/)
   - Check your version: `opencode --version`
+
+- **At least one usable model backend configured in OpenCode**
 
 - **Python 3.8 or higher** installed
 
@@ -117,11 +119,11 @@ opencode-config info mcp-builder
 
 - 7 primary agents for different development roles
 - 46 specialized subagents organized by domain
-- 9 skills for complex workflows
+- 12 skills for complex workflows
 - 3 commands for common operations
 - 3 MCP server definitions (RagClaw, Context7, Brave Search)
 - 1 tool plugin (GitHub)
-- **Total: 69 components**
+- **Total: 72 components**
 
 ---
 
@@ -133,7 +135,7 @@ OpenCode Registry offers three installation bundles:
 |--------|-----------|----------|
 | **basic** | 5 essential | First-time users, minimal setup |
 | **intermediate** | 16+ components | Regular users, common workflows |
-| **advanced** | All 69 components | Power users, complete ecosystem |
+| **advanced** | All 72 components | Power users, complete ecosystem |
 
 **Preview a bundle before installing:**
 
@@ -172,7 +174,7 @@ The wizard helps you configure which model to use for each complexity tier:
 
 - Model tiers were configured in `~/.config/opencode/opencode-registry-config.json`
 - Component files were **copied** to `~/.config/opencode/` with your model tier configuration applied
-- Each component's `model_tier:` frontmatter was resolved to the correct `model:` for your setup
+- Model-aware component frontmatter was resolved for your setup where supported during installation
 - Installation was tracked in `~/.config/opencode/opencode-registry-installed.json`
 - You can now use these components with OpenCode
 
@@ -267,7 +269,7 @@ Your System
 |----------------|-------|----------------|--------------|---------|
 | **Primary Agent** | 7 | Press **Tab** to switch | You (in OpenCode) | Switch to `build-code` agent |
 | **Subagent** | 46 | Use **@mention** or invoked automatically | Primary agents or you | `@python-pro optimize this code` |
-| **Skill** | 9 | Loaded by agents automatically | Agents/subagents | Agent loads `mcp-builder` skill when needed |
+| **Skill** | 12 | Loaded by agents automatically | Agents/subagents | Agent loads `mcp-builder` skill when needed |
 | **Command** | 3 | Type **/** in OpenCode | You (in OpenCode) | `/commit` to create git commit |
 | **MCP Server** | 3 | Registered as MCP server | Agents or you | Context7 for live library docs |
 | **Tool** | 1 | Registered as OpenCode tool plugin | Agents or you | `github_pr` to manage pull requests |
@@ -285,7 +287,7 @@ Your System
 ### How It Works
 
 1. **Registry (Read-Only)**: The `opencode-registry/` directory contains all components
-2. **Installation**: CLI **copies** files from the registry to `~/.config/opencode/`, resolving `model_tier:` to the correct `model:` value
+2. **Installation**: CLI **copies** files from the registry to `~/.config/opencode/` and applies model-tier resolution where supported
 3. **Tracking**: Database tracks what's installed and when
 4. **Model Tiers**: First install triggers wizard; subsequent installs use saved config
 5. **Updates**: Pull latest changes from git, then run `update --all` — model tier config is re-applied automatically

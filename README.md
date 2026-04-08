@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-> Centralized library of 69 OpenCode components: agents, subagents, skills, commands, MCP servers, and tools with intelligent installation management.
+> Centralized library of 72 OpenCode components: agents, subagents, skills, commands, MCP servers, and tools with intelligent installation management.
 
 [Quick Start](#quick-start) • [Documentation](#documentation) • [Contributing](CONTRIBUTING.md)
 
@@ -13,10 +13,21 @@
 
 A curated collection of OpenCode components with a smart CLI installer:
 
-- **69 ready-to-use components** - Agents, subagents, skills, commands, MCP servers, and tools
+- **72 ready-to-use components** - Agents, subagents, skills, commands, MCP servers, and tools
 - **Smart CLI** - Installation, updates, and tracking
 - **Model tier system** - Configure models per complexity (high/medium/low/free)
 - **Bundle support** - Install groups (basic/intermediate/advanced)
+
+---
+
+## Prerequisites
+
+`opencode-registry` requires a working OpenCode setup:
+
+- **OpenCode is installed**
+- **At least one usable model backend is configured**
+- **Python 3.8+ is installed**
+- **Git is installed**
 
 ---
 
@@ -31,7 +42,7 @@ cd opencode-registry/installer && pip install -e .
 cd .. && opencode-config install --group basic
 
 # 3. Use with OpenCode
-# Press Tab in OpenCode to switch agents, @mention for subagents
+# Press Tab in OpenCode to switch agents; use @mention for subagents.
 ```
 
 **Expected output after install:**
@@ -66,13 +77,13 @@ cd .. && opencode-config install --group basic
 
 ---
 
-## Components (69 Total)
+## Components (72 Total)
 
 | Type | Count | Examples |
 |------|-------|----------|
 | **Primary Agents** | 7 | build-code, plan-design, debug, review |
 | **Subagents** | 46 | python-pro, kubernetes-expert, security-auditor |
-| **Skills** | 9 | mcp-builder, project-docs, kubernetes-ops, argocd-ops, kb-search, registry-sync |
+| **Skills** | 12 | mcp-builder, project-docs, kubernetes-ops, argocd-ops, kb-search, registry-sync |
 | **Commands** | 3 | /commit, /documentation, /kb |
 | **MCP Servers** | 3 | ragclaw, context7, brave-search |
 | **Tools** | 1 | github |
@@ -85,14 +96,14 @@ cd .. && opencode-config install --group basic
 |--------|-----------|----------|
 | `basic` | 5 | Getting started |
 | `intermediate` | 16+ | Common workflows |
-| `advanced` | 69 | Complete ecosystem |
+| `advanced` | 72 | Complete ecosystem |
 
 ---
 
 ## How It Works
 
-1. **Components** live in `opencode/` with `model_tier:` placeholders
-2. **Installation** copies files to `~/.config/opencode/` and resolves model tiers
+1. **Components** live in `opencode/`; model-aware components can use `model_tier:` placeholders
+2. **Installation** copies files to `~/.config/opencode/` and resolves model tiers where supported
 3. **Tracking** stores state in `~/.config/opencode/opencode-registry-installed.json`
 4. **Updates** re-apply your model tier config to new versions
 
@@ -161,7 +172,7 @@ opencode-config models --set low "github-copilot/claude-haiku-4.5"
 | [Agent Guide](docs/AGENT-GUIDE.md) | Choose the right agent |
 | [Permissions](docs/PERMISSIONS.md) | Configure agent autonomy and tools |
 | [Quick Reference](docs/QUICKREF.md) | CLI command cheat sheet |
-| [FAQ](docs/FAQ.md) | Common questions + troubleshooting |
+| [FAQ](docs/FAQ.md) | Common questions and troubleshooting |
 | [Versioning](docs/VERSIONING.md) | Component version management |
 
 ---
@@ -175,7 +186,7 @@ opencode-config config --list
 # Custom target directory
 opencode-config config --target /path/to/directory
 
-# Auto-detect registry (works with git worktrees)
+# Auto-detect the registry (works with Git worktrees)
 opencode-config config --registry auto
 ```
 

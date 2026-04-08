@@ -20,6 +20,9 @@ components:
   - kubernetes-ops
   - argocd-ops
   - registry-sync
+  - proofreader
+  - second-opinion
+  - working-with-helm-templates
   
   # All commands
   - commit
