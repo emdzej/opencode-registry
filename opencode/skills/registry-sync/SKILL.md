@@ -46,7 +46,7 @@ Activate when the user wants to:
 
 Components are installed to `~/.config/opencode/` with this structure:
 
-```
+```text
 ~/.config/opencode/
   agents/
     <agent-slug>.md
@@ -131,7 +131,7 @@ For each local file that exists:
 
 Compile a sync plan table showing every component in scope:
 
-```
+```markdown
 ## Sync Plan
 
 ### Agents (3 available, 1 new, 1 outdated)
@@ -196,7 +196,7 @@ Once confirmed, for each component to sync:
 
 After syncing, show a summary:
 
-```
+```markdown
 ## Sync Complete
 
 - Installed: 2 new components (new-agent, my-skill)
